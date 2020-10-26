@@ -36,6 +36,7 @@ namespace curd.mobile.Services
         public async Task<bool> UpdateItemAsync(Item item)
         {
             ProductDTO dto = new ProductDTO(item);
+            dto.Creation = item.Creation;
             request = RestService.For<IRequestApi>(URL);
             var res = await request.UpdatePost(item.Id, dto);
             return await Task.FromResult(true);
