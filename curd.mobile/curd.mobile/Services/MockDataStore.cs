@@ -59,15 +59,7 @@ namespace curd.mobile.Services
                             }
                         }
 
-                    }
-                    catch(HttpRequestException ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    catch(IndexOutOfRangeException ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
+                    }               
                     catch (ArgumentOutOfRangeException e)
                     {
                         Console.WriteLine(e.Message);

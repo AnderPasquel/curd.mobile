@@ -31,7 +31,7 @@ namespace curd.mobile.Views
         {
             var page = new ItemsPage();
             MessagingCenter.Send(this, "UpdateItem", Item);         
-            await Navigation.PushModalAsync(new NavigationPage(page));
+            await Navigation.PopModalAsync();
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)
